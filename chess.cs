@@ -20,6 +20,7 @@ byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 void setup(){
+ pinMode(12, OUTPUT);
 pinMode(buzzer, OUTPUT);
  lcd1.begin();
  lcd1.backlight();
@@ -48,5 +49,10 @@ void loop(){
   delay(500);
   noTone(buzzer);
   delay(500);
+  digitalWrite(12, HIGH);
+  delay(500); 
+  digitalWrite(12, LOW);
+  delay(500);
   }
 }
+
