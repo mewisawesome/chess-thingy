@@ -31,7 +31,7 @@ Serial.println("\nI2C Scanner");
  Serial.println("Tell your opponent what piece you are moving");
  Serial.println("If it doesnt say its your opponents turn or it does it to early redo it till it works it also wont indicate checkmate");
  Serial.println("Pick your column and number");
-  Serial.println("The buzzer will go off 2 and that will indicate a move swap");
+  Serial.println("The buzzer will go off twice and that will indicate a move swap");
 }
   
 void loop(){
@@ -55,4 +55,3 @@ void loop(){
   delay(500);
   }
 }
-
