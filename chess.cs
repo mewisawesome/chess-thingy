@@ -43,15 +43,19 @@ void loop(){
   lcd1.print(keys);
   if(rowNum < 1)
   rowNum++;
-  else
-  rowNum = 0;
+   if(rowNum < 9)
+  {
   tone(buzzer, 1000);
   delay(500);
   noTone(buzzer);
   delay(500);
   digitalWrite(12, HIGH);
-  delay(500); 
+  delay(1000); 
   digitalWrite(12, LOW);
-  delay(500);
+  delay(1000);
+  }
+  else
+  rowNum = 0;
+  
   }
 }
