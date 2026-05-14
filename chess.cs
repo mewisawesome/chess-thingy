@@ -32,6 +32,7 @@ void setup() {
   Serial.println("If it doesnt say its your opponents turn or it does it to early redo it till it works it also wont indicate checkmate");
   Serial.println("Pick your column and number");
   Serial.println("The buzzer will go off twice and that will indicate a move swap");
+  Serial.println("The led will be off at the start when it turns on it will be blacks move");
 }
 
 void loop() {
@@ -48,9 +49,9 @@ void loop() {
       delay(500);
       noTone(buzzer);
       delay(500);
-      digitalWrite(12, HIGH);
-      delay(1000);
       digitalWrite(12, LOW);
+      delay(1000);
+      digitalWrite(12, HIGH);
       delay(1000);
     }
   }
